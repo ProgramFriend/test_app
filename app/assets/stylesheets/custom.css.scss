@@ -3,6 +3,24 @@ $navbar-default-bg: black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.article-title {
+font-weight: bold;
+font-size: 1.5em;
+}
+.article-body {
+border-top: 1px solid #DFDFDF;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+.article-actions {
+border-top: 1px solid #DFDFDF;
+padding-top: 5px;
+}
+.description {
+margin-top: 0;
+}
+
 .panel-body{
    color: red;
    background-color: #F6CECE;
@@ -18,7 +36,7 @@ $navbar-default-bg: black;
   text-align: center;
 }
 .jumbotron{
-  margin-top: 50px;
+  margin-top: 20px;
   background-image: asset-url('blue-image.jpg');
   background-size: cover;
   height: 620px;
@@ -59,7 +77,6 @@ footer ul li{
   margin-left: 15px;
 }
 
-
 #alpha{
   color: white;
   font-weight: bold;
@@ -70,7 +87,7 @@ footer ul li{
 #alpha:hover{
   color:#FFC000;
   text-decoration: none;
-  font-size: 25.2px;
+  font-size: 25px;
   letter-spacing: -0.2px;
 }
 
@@ -110,7 +127,7 @@ footer ul li{
   font-size: 50px;
   letter-spacing: 1px;
   text-align: center;
-  margin-top: 280px;
+  margin-top: 200px;
   background-color: #00A97E;
 }
 #signUpNow:hover{
