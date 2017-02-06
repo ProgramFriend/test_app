@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   root 'welcome#home'
   get 'about', to: 'welcome#about'
-  
+  get 'home', to: 'welcome#home'
   resources :articles
   
   get 'signup', to: 'users#new'

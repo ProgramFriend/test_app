@@ -1,5 +1,24 @@
-<div align="center" class= "jumbotron">
-  <h1 id='alphaName'> Alpha Blog</h1>
-  
-  <%= link_to "Free sign up NOW", 'signup' ,class: "btn" ,id:'signUpNow'%>
-</div>
+<!DOCTYPE html>
+<html>
+  <body class= "scs">
+    <div align="center">
+      <p id='alphaName', class="animated infinite pulse">Mokslas LENGVAI ir programavimas!</p>
+      <ul id="description">
+        <h2>Mėgsti MOKSLUS?!</h2>
+        <li>Aišku, kad tau jie NEpatinka - tai PRISIJUNK PRIE MŪSŲ!</li>
+        <p><p></p></p>
+        <li>Gali ir išeiti, o jei pasiliksi:</li>
+        <li>Išmoksi <b><i>triukų GREIČIAU </i></b>ĮSIMINTI!</li>
+        <li>Sugaiši <b><i>30 min. mažiau </i></b>namų darbams!</li>
+        <li>Galėsi BET KO paklausti ir tau <b><i>ATSAKYSIME</i></b>!</li>
+        <li>Matematika <b><i>SUPRANTAMIAU </i></b>!!!</li>
+        <li>Lietuvių <b><i>SUPRANTAMIAU </i></b>!!!</li>
+        <li>Sukursi <b><i>INTERNETINĮ PUSLAPĮ, AR ŽAIDIMĄ!</i></b></li>
+        <li><small>Ankščiau mokiausi 6, bet dabar aš gaunu 10, bei moku profesionaliai programoti.</small></li>
+        <li>Nori išbandyti? - <i><b id="black">Nori LAISVALAIKIO?!</b></i></li>
+      </ul>
+      <%= link_to "Noriu daugiau LAISVALAIKIO?!", signup_path ,class: "btn", class:"hvr-grow",id:'signUpNow'%>
+      <%= link_to 'PRISIJUNGTI!', login_path, class: "btn", class:"hvr-grow", id: "miniLogin" %>
+    </div>
+  </body>
+</html>
