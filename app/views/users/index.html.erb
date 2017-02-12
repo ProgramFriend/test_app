@@ -1,5 +1,5 @@
-<% @title = "Users" %>
-<h1 class="center">All Alpha bloggers!</h1>
+<% @title = "......" %>
+<h1 class="center">Visi ..... vartotojai!</h1>
 <div class=center>
   <%= will_paginate %>
 <% @users.each do |user| %>
@@ -10,8 +10,8 @@
         <li class="article-title"><%= link_to user.username, user_path(user) %> </li>
         <li><small> <%= pluralize(user.articles.count, "article") if user.articles%></small></li>
         <% if logged_in? and current_user.admin? %>
-          <li><%= link_to "Delete this user", user_path(user), method: :delete, 
-              data: ("Are you sure to delete this user and all of his articles?") %></li>
+          <li><%= link_to "Ištrinti vartotoją", user_path(user), method: :delete, 
+              data: ("Ar tu tikrai noti pašalinti šį vartotoją?") %></li>
         <% end %>
       </div>
     </div>

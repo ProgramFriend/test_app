@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to alpha blog #{@user.username}!"
+      flash[:success] = "Labas! Tikiuosi tau patiks! #{@user.username}!"
       redirect_to user_path(@user)
     else
       render 'new'
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   
   def update
     if @user.update(user_params)
-      flash[:success] = "Your account was updated successfully!"
+      flash[:success] = "Tavo paskyra buvo atnaujinta sėkmingai!"
       redirect_to articles_path
     else
       render 'edit'
@@ -53,14 +53,14 @@ class UsersController < ApplicationController
   end
   def require_same_user
     if current_user != @user and !current_user.admin
-      flash[:danger] = "You can edit just your account"
+      flash[:danger] = "Gali keisti tik savo paskyros nustatymus."
       redirect_to root_path
     end
   end
   
   def require_admin
     if logged_in? and !current_user.admin
-      flash[:danger] = "Only admin can access his action"
+      flash[:danger] = "Tik adminas(ai) gali pasiekti kito asmens info."
       redirect_to root_path
     end
   end

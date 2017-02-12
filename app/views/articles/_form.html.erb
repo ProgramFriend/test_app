@@ -10,7 +10,7 @@
         </div>
         
       <div class="col-sm-8">
-        <%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
+        <%= f.text_field :title, class: "form-control", placeholder: "....... pavadinimas", autofocus: true %>
       </div>
     </div>
 
@@ -20,7 +20,7 @@
       </div>
 
       <div class="col-sm-8">
-        <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article" %>
+        <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Aprašymas" %>
       </div>
     </div>
     
@@ -43,7 +43,7 @@
         <% end %>
 
     <div class="col-xs-4 col-xs-offset-4">
-      [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+      [ <%= link_to "Grįžti 'home page'.(pakeitimai liks neišsaugot)", articles_path %> ]
     </div>
   </div>
 </div>

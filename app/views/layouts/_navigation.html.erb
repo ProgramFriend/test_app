@@ -9,28 +9,28 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to 'Alpha Blog', root_path, class:"navbar-brand", id:"alpha" %>
+        <%= link_to 'Namai', root_path, class:"navbar-brand" , id:"alpha", class:"hvr-bounce-in" %>
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         
         <ul class="nav navbar-nav">
-          <li><%= link_to "Articles", articles_path, id:"navigationBar" %> </li>
-          <li><%= link_to "Users", users_path, id:"navigationBar" %></li>
+          <li><%= link_to ".......", articles_path, id:"navigationBar", class:"hvr-bounce-in" %> </li>
+          <li><%= link_to "Naudotojai", users_path, id:"navigationBar", class:"hvr-bounce-in" %></li>
           
           <% if logged_in? %>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" id = "navigationBar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle hvr-icon-hang", id = "navigationBar", data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SUKURK SAVO! <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><%= link_to "New Article", new_article_path , id:"dropdownBar" %> </li>
+              <li class="hvr-pulse-shrink"><%= link_to "Naujas .......", new_article_path , id:"dropdownBar" %> </li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" id = "navigationBar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle hvr-icon-hang" id = "navigationBar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kategorijos<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li role="separator" class="divider"></li>
-              <li><%= link_to "ALL CATEGORIES", categories_path , id:"dropdownBar" %> </li>
+              <li class="hvr-pulse-shrink"><%= link_to "VISOS KATEGORIJOS", categories_path , id:"dropdownBar" %> </li>
               <li role="separator" class="divider"></li>
               <% Category.all.each do |category| %>
                 <li><%= link_to "#{category.name}", category_path(category), id: "dropdownBar" %></li>
@@ -38,7 +38,7 @@
               
               <% if logged_in? and current_user.admin? %>
                 <li role="separator" class="divider"></li>
-                <li><%= link_to "Create new category!", new_category_path, id: "dropdownBar" %></li>
+                <li class="hvr-pulse-shrink"><%= link_to "Sukurk naują kategoriją!", new_category_path, id: "dropdownBar" %></li>
               <% end %>
             </ul>
           </li>
@@ -49,23 +49,23 @@
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Ieškoti</button>
         </form>
         
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
-            <li><%= link_to 'Log Out', logout_path, method: :delete, id:"navigationBar"%></li>
+            <li><%= link_to 'Atsijungti', logout_path, method: :delete, id:"navigationBar"%></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" id="log-in-out" data-toggle="dropdown" role="button" aria-haspopup="true" 
-              aria-expanded="false">Your Profile <%="(Admin)" if current_user.admin? %> <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle hvr-icon-hang" id="log-in-out" data-toggle="dropdown" role="button" aria-haspopup="true" 
+              aria-expanded="false">Tavo Profilis <%="(Adminas)" if current_user.admin? %> <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><%= link_to 'Edit your profile', edit_user_path(current_user), id:"dropdownBar"%></li>
-                <li><%= link_to 'View your profile', user_path(current_user), id:"dropdownBar"%></li>
+                <li class="hvr-pulse-shrink"><%= link_to 'Tavo paskyros nustatymai', edit_user_path(current_user), id:"dropdownBar"%></li>
+                <li class="hvr-pulse-shrink"><%= link_to 'Peržiūrėk savo paskyrą', user_path(current_user), id:"dropdownBar"%></li>
               </ul>
             </li>
           <% else %>
-          <li><%= link_to 'Log In !', login_path, id:"log-in-out" %></li>
-          <li><%= link_to 'Sign Up !', signup_path, id: "log-in-out" %></li>
+          <li  class:"hvr-bounce-in"><%= link_to 'Prisijungti !', login_path, id:"log-in-out" %></li>
+          <li  class="hvr-bounce-in"><%= link_to 'Registruotis !', signup_path, id: "log-in-out" %></li>
           <% end %>
         </ul>
       
